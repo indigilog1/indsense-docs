@@ -1,0 +1,56 @@
+site_name: INDSENSE
+site_url: https://docs.indsense.in
+
+nav:
+  - Home: index.md
+  - IND-CT3-xxx:
+      - IND-CT3-xxx/index.md
+      - Device Description: IND-CT3-xxx/device_desc.md
+      - Connecting to Network: IND-CT3-xxx/wifi_conn.md
+      - Connecting to MQTT Broker: IND-CT3-xxx/mqtt_conn.md
+      - Calibrating the Device Sensors: IND-CT3-xxx/device_calib.md
+      - Change Login Password: IND-CT3-xxx/password.md
+      - Testing Hardware: IND-CT3-xxx/hardware_test.md
+
+  - IND-RLY-DO4-M:
+      - IND-RLY-DO4-M/index.md
+      - Features & Specification: IND-RLY-DO4-M/features.md
+      - Device Configuration: IND-RLY-DO4-M/configuration.md
+      - Operation Protocol: IND-RLY-DO4-M/operation.md
+      - Testing: IND-RLY-DO4-M/testing.md
+      - NodeRed Integration: IND-RLY-DO4-M/nodered.md
+
+  - A7672S-MODEM-PRO:
+      - A7672S-MODEM-PRO/index.md
+
+  - ESP32-C3-DEV:
+      - ESP32-C3-DEV/index.md
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  palette:
+    primary: indigo
+  font:
+    code: Roboto
+  favicon: assets/images/favicon.ico
+  logo: assets/images/logo.png
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.indexes
+    - content.tabs.link
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.superfences

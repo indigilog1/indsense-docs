@@ -1,0 +1,9 @@
+{% if page.meta.distributors %}
+<div style="display:inline-flex; gap:25px; align-items:center;">
+    {% for d in page.meta.distributors %}
+    <a href="{{ d.url }}" target="_blank" rel="noopener">
+        <img src="{{ d.logo | url }}" width="250">
+    </a>
+    {% endfor %}
+</div>
+{% endif %}

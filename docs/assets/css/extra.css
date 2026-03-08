@@ -1,0 +1,33 @@
+.buy-card {
+  background: var(--md-default-bg-color);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 16px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.buy-card-img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.buy-card-title {
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+.buy-card-button {
+  display: block;
+  padding: 8px 12px;
+  background: #1976d2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.buy-card-button:hover {
+  background: #125aa0;
+}

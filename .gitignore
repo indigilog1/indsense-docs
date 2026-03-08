@@ -1,0 +1,39 @@
+# MkDocs generated site
+site/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+.envrc
+.venv/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+
+# Node (if using mkdocs-material extra plugins)
+node_modules/
+
+# MkDocs local development files
+.cache/
