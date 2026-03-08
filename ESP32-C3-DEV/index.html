@@ -1,0 +1,1196 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.indsense.in/ESP32-C3-DEV/">
+      
+      
+        <link rel="prev" href="../A7672S-MODEM-PRO/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>ESP32-C3-DEV - INDSENSE</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#esp32-c3-dev" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="INDSENSE" class="md-header__button md-logo" aria-label="INDSENSE" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            INDSENSE
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ESP32-C3-DEV
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="INDSENSE" class="md-nav__button md-logo" aria-label="INDSENSE" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    INDSENSE
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../IND-CT3-xxx/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    IND-CT3-xxx
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            IND-CT3-xxx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IND-CT3-xxx/device_desc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Device Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IND-CT3-xxx/wifi_conn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to Network
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IND-CT3-xxx/mqtt_conn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to MQTT Broker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IND-CT3-xxx/device_calib/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calibrating the Device Sensors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IND-CT3-xxx/password/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Change Login Password
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IND-CT3-xxx/hardware_test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing Hardware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../IND-RLY-DO4-M/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    IND-RLY-DO4-M
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            IND-RLY-DO4-M
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IND-RLY-DO4-M/features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Features & Specification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IND-RLY-DO4-M/configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Device Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IND-RLY-DO4-M/operation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operation Protocol
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IND-RLY-DO4-M/testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IND-RLY-DO4-M/nodered/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NodeRed Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../A7672S-MODEM-PRO/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    A7672S-MODEM-PRO
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            A7672S-MODEM-PRO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  <span class="md-ellipsis">
+    ESP32-C3-DEV
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            ESP32-C3-DEV
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esp32-c3-wi-fi-ble-soc" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESP32-C3 Wi-Fi + BLE SoC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-type-c-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      USB Type-C Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrated-battery-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrated Battery Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expansion-friendly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expansion Friendly
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pinout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pinout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pinout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pinout-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pinout Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfacing-with-mcu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interfacing with MCU
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-supply" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Supply
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powering-the-module-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Powering the Module ON
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Powering the Module ON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pwr-key-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. PWR KEY Control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-auto-power-on-solder-jumper" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Auto Power ON (Solder Jumper)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-status-leds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Status LEDs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module Status LEDs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status-led" class="md-nav__link">
+    <span class="md-ellipsis">
+      Status LED
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-led-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network LED (NET)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1pps-led" class="md-nav__link">
+    <span class="md-ellipsis">
+      1PPS LED
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-buy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to BUY?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+<h1 id="esp32-c3-dev">ESP32-C3-DEV</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The ESP32-C3 Development Board is a compact and versatile IoT development platform designed for rapid prototyping, embedded system development, and wireless applications. Built around the <strong>ESP32-C3 Wi-Fi and Bluetooth Low Energy microcontroller</strong>, this board provides reliable wireless connectivity, low power consumption, and an easy-to-use interface for developers, makers, and engineers.</p>
+<p>The board integrates essential hardware components such as a <strong>USB Type-C interface for power and programming, on-board voltage regulation, battery charging circuitry, and GPIO breakout pins</strong>, enabling seamless integration into IoT devices, automation systems, and smart electronics projects.</p>
+<p>Its <strong>breadboard-friendly</strong> form factor and clearly labeled GPIO pins make it ideal for both beginners and advanced developers working with the <strong>ESP-IDF, Arduino, or other ESP32</strong> compatible development frameworks.</p>
+<p><img alt="ESP32-C3-DEV" src="assets/images/esp32-c3_dev_top.png" /></p>
+<h2 id="key-features">Key Features</h2>
+<h4 id="esp32-c3-wi-fi-ble-soc">ESP32-C3 Wi-Fi + BLE SoC</h4>
+<ul>
+<li>2.4 GHz Wi-Fi (802.11 b/g/n)</li>
+<li>Bluetooth Low Energy (BLE 5)</li>
+<li>RISC-V 32-bit single-core processor</li>
+</ul>
+<h4 id="usb-type-c-interface">USB Type-C Interface</h4>
+<ul>
+<li>Programming and power through USB</li>
+<li>Easy connection to PC or USB power adapter</li>
+</ul>
+<h4 id="integrated-battery-support">Integrated Battery Support</h4>
+<ul>
+<li>Li-ion / Li-Po battery connector pads (<code>+BAT</code> / <code>-BAT</code>)</li>
+<li>On-board battery charging circuitry</li>
+</ul>
+<h4 id="power-management">Power Management</h4>
+<ul>
+<li>On-board voltage regulator</li>
+<li>Power switch for convenient operation</li>
+</ul>
+<h4 id="user-interface">User Interface</h4>
+<ul>
+<li><strong>BOOT</strong> button for entering firmware flashing mode</li>
+<li><strong>RESET</strong> button for restarting the device</li>
+<li>Power and charging status indicator LEDs</li>
+</ul>
+<h4 id="expansion-friendly">Expansion Friendly</h4>
+<ul>
+<li>Fully exposed GPIO pins</li>
+<li>Breadboard compatible form factor</li>
+<li>Supports common peripherals:</li>
+<li>UART</li>
+<li>SPI</li>
+<li>I²C</li>
+<li>ADC</li>
+<li>PWM</li>
+</ul>
+<h2 id="pinout">Pinout</h2>
+<p><img alt="A7672S-MODEM-PRO Pinout" src="assets/images/esp32-c3-dev_pinout.png" /></p>
+<h3 id="pinout-description">Pinout Description</h3>
+<table>
+<thead>
+<tr>
+<th>PIN</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5V - 24V</td>
+<td>Input power pin. 5V to 24V DC</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>Ground Pin</td>
+</tr>
+<tr>
+<td>VDD</td>
+<td>MCU Voltage</td>
+</tr>
+<tr>
+<td>RXD</td>
+<td>UART Receiver Pin</td>
+</tr>
+<tr>
+<td>TXD</td>
+<td>UART Transmitor Pin</td>
+</tr>
+<tr>
+<td>RESET</td>
+<td>Module Reset Pin</td>
+</tr>
+<tr>
+<td>POWER KEY</td>
+<td>Module Power Key Pin</td>
+</tr>
+</tbody>
+</table>
+<h2 id="interfacing-with-mcu">Interfacing with MCU</h2>
+<table>
+<thead>
+<tr>
+<th>A7672S-MODEM-PRO PIN</th>
+<th>MCU PIN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VDD</td>
+<td>MCU Power Supply Pin</td>
+</tr>
+<tr>
+<td>RXD</td>
+<td>MCU UART TX Pin</td>
+</tr>
+<tr>
+<td>TXD</td>
+<td>MCU UART RX Pin</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Logic Level Reference</p>
+<p>For proper <strong>UART logic level compatibility</strong>, connect the module’s <strong>VDD</strong> and <strong>GND</strong> pins to the MCU’s corresponding <strong>power supply and ground reference</strong>.</p>
+</div>
+<h2 id="power-supply">Power Supply</h2>
+<p>The module supports a <strong>wide input voltage range of 5 V to 24 V DC</strong> and must be powered through the <strong>pin header power input</strong>. </p>
+<p><strong>Powering the module via the USB port is not supported</strong> and may result in improper operation.</p>
+<div class="admonition warning">
+<p class="admonition-title">Power Polarity</p>
+<p>This module <strong>does not include reverse polarity protection</strong>. Ensure correct power supply polarity before connection. Applying reverse voltage may cause permanent damage to the module.</p>
+</div>
+<h2 id="powering-the-module-on">Powering the Module ON</h2>
+<p>The module can be powered ON using either of the following methods:</p>
+<h3 id="1-pwr-key-control">1. PWR KEY Control</h3>
+<p>The module can be turned ON by controlling the <strong>PWR KEY</strong> pin using an MCU GPIO.  </p>
+<p>To power ON the module, <strong>pull the PWR KEY pin HIGH for the required duration</strong> (refer to the module timing specifications), then release it.</p>
+<p>This method allows the MCU to:</p>
+<ul>
+<li>Programmatically control power ON and OFF</li>
+<li>Implement power-saving and reset strategies</li>
+<li>Monitor and manage modem state</li>
+</ul>
+<h3 id="2-auto-power-on-solder-jumper">2. Auto Power ON (Solder Jumper)</h3>
+<p>The module also supports <strong>automatic power ON</strong>. By <strong>closing the dedicated solder jumper on the back side of the PCB</strong>, the PWR KEY signal is asserted automatically when power is applied.</p>
+<p>When auto power ON is enabled:</p>
+<ul>
+<li>The module powers ON immediately after Power is applied</li>
+<li>MCU control of the PWR KEY is not required</li>
+<li>Suitable for simple or standalone deployments</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only one power-on method should be used at a time. If auto power ON is enabled via the solder jumper, ensure the MCU GPIO connected to PWR KEY is disconnected or not actively driven.</p>
+</div>
+<h2 id="module-status-leds">Module Status LEDs</h2>
+<p>The module provides onboard LEDs to indicate <strong>power</strong>, <strong>network</strong>, and <strong>GNSS timing</strong> status.</p>
+<h3 id="status-led">Status LED</h3>
+<p>The <strong>STATUS</strong> LED indicates the power state of the module.</p>
+<ul>
+<li><strong>ON</strong>: Module is powered ON and operating</li>
+<li><strong>OFF</strong>: Module is powered OFF</li>
+</ul>
+<h3 id="network-led-net">Network LED (NET)</h3>
+<p>The <strong>NET</strong> LED indicates the current cellular network status of the module.</p>
+<table>
+<thead>
+<tr>
+<th>NET LED Behavior</th>
+<th>Module Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Always ON</td>
+<td>Searching for cellular network</td>
+</tr>
+<tr>
+<td>200 ms ON / 200 ms OFF</td>
+<td>Registered on network or data transmission in progress</td>
+</tr>
+<tr>
+<td>OFF</td>
+<td>Module powered OFF, or in sleep mode (<code>AT+CSCLK=1</code>) with DTR pulled HIGH</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1pps-led">1PPS LED</h3>
+<p>The <strong>1PPS</strong> LED indicates the <strong>GNSS one-pulse-per-second (1PPS)</strong> timing signal.</p>
+<ul>
+<li>Blinks once per second when GNSS is active and a valid timing signal is available</li>
+<li>OFF when GNSS is disabled or no valid GNSS fix is available</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <strong>1PPS LED</strong> is available <strong>only on the A7672S-MODEM-PRO-G variant</strong>.</p>
+</div>
+<h2 id="where-to-buy"><strong>Where to BUY?</strong></h2>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+<div style="display:inline-flex; gap:25px; align-items:center;">
+    
+    <a href="https://maketronics.in/product/a7672s-modem-pro-without-gnss-and-ble-industrial-grade-a7672s-lasc/" target="_blank" rel="noopener">
+        <img src="../assets/images/maketronics_logo.png" width="250">
+    </a>
+    
+    <a href="https://robu.in/product/indsense-a7672s-industrial-modem-4g-lte-cat-1/" target="_blank" rel="noopener">
+        <img src="../assets/images/robu_logo.png" width="250">
+    </a>
+    
+</div>
+
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.indexes", "content.tabs.link"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
