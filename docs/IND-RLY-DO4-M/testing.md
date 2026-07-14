@@ -8,11 +8,11 @@ Follow these steps to set up and test the **4-channel industrial relay module**:
 
 2. **Set the Baud Rate**  
     - Configure the **baud rate** using the onboard **baud rate selection switch**.  
-    - Refer to [Baudrate Selection](#baudrate-selection) for available options.  
+    - Refer to [Baudrate Selection](configuration.md/#baudrate-selection) for available options.  
 
 3. **Set the Device ID (Slave ID)**  
     - Assign a unique **Device ID (1-32)** using the **Device ID selection switch**.  
-    - Refer to [Device ID Selection](#device-id-selection) for available options.  
+    - Refer to [Device ID Selection](configuration.md/#device-id-selection) for available options.  
 
 4. **Power the Device**  
     - Supply a **DC voltage between 5V and 24V** to the module.  
@@ -35,4 +35,4 @@ Follow these steps to set up and test the **4-channel industrial relay module**:
     - Set Mode to `RTU` and click OK
     - Now go to Functions → Test Center. This opens the `Test Center` dialog box.
    ![Modbus Poll](assets/images/test_center.PNG)
-    - Now enter the commands to control relay, get status of the relay. Refer to [Operation Commands](#operation-protocol) for detailed command syntax.
+    - Now enter the commands to control relay, get status of the relay. Refer to [Operation Commands](operation.md/#operation-protocol) for detailed command syntax.
