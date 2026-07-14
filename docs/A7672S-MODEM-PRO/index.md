@@ -19,7 +19,7 @@ The modem supports **USB and UART interfaces** and is controlled using standard 
 
 A7672S-MODEM-PRO is designed for robust operation, featuring reliable RF performance, external antenna support, and protection suitable for industrial environments. Its compact form factor and low power consumption make it ideal for applications such as **remote monitoring, smart energy meters, industrial automation, asset tracking, smart agriculture, and telemetry systems.**
 
-![A7672S-MODEM-PRO](assets\images\A7672S_MODEM_PRO_TOP.png)
+![A7672S-MODEM-PRO](assets/images/A7672S_MODEM_PRO_TOP.png)
 
 !!! info "Available Variants"
     The A7672S-MODEM-PRO is available in two variants:
@@ -57,7 +57,7 @@ A7672S-MODEM-PRO is designed for robust operation, featuring reliable RF perform
 
 ## Pinout
 
-![A7672S-MODEM-PRO Pinout](assets\images\A7672S-MODEM-PRO_PINOUT.png)
+![A7672S-MODEM-PRO Pinout](assets/images/A7672S-MODEM-PRO_PINOUT.png)
 
 ### Pinout Description
 
