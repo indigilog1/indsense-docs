@@ -28,7 +28,7 @@ Connect your device to a Wi-Fi network using the built-in configuration portal. 
 
     - Enter the default login credentials:
      
-     ![Login Page](./assets/images/login_page.PNG)
+     ![Login Page](assets/images/login_page.PNG)
      
       - **Username:** `admin`
       - **Password:** `admin`
@@ -42,7 +42,7 @@ Connect your device to a Wi-Fi network using the built-in configuration portal. 
     - Available networks will be listed.  
       If your network isn’t visible, click the **Reload** button to scan again.
      
-     ![Network Page](./assets/images/network_page.PNG)
+     ![Network Page](assets/images/network_page.PNG)
 
 6. **Connect to Desired Network**
 
@@ -52,7 +52,7 @@ Connect your device to a Wi-Fi network using the built-in configuration portal. 
       - **Open Networks:** Leave the password field empty.
     - Press **Connect**.
    
-    ![Network Credentials Page](./assets/images/network_cred.PNG)
+    ![Network Credentials Page](assets/images/network_cred.PNG)
 
 7. **Confirm Connection**
 

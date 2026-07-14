@@ -35,17 +35,17 @@ Secure WebSocket Port= 8084
 
 Once configured, the final setup should appear similar to the image below:
 
-![MQTT Connection Test](./assets/images/mqtt_page_2.PNG)
+![MQTT Connection Test](assets/images/mqtt_page_2.PNG)
 
 ---
 
 ## 📊 Viewing Data on MQTTX
 
 1. Open **MQTTX** and create a new connection using the same broker details.
-    ![MQTTX Connection](./assets/images/mqttx_conn.PNG)
+    ![MQTTX Connection](assets/images/mqttx_conn.PNG)
 2. Subscribe to the appropriate **publish topic** configured on the device.
-    ![MQTTX Subscription](./assets/images/mqttx_sub.PNG)
+    ![MQTTX Subscription](assets/images/mqttx_sub.PNG)
 3. Monitor the live sensor data streamed from the **IND-CT3-xxx** device.
-    ![MQTTX Monitor](./assets/images/mqttx_monitor.PNG)
+    ![MQTTX Monitor](assets/images/mqttx_monitor.PNG)
 
 ---
