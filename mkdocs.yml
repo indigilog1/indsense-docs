@@ -20,6 +20,9 @@ nav:
       - Testing: IND-RLY-DO4-M/testing.md
       - NodeRed Integration: IND-RLY-DO4-M/nodered.md
 
+  - IND-MOD-IO88:
+      - IND-MOD-IO88/index.md
+
   - A7672S-MODEM-PRO:
       - A7672S-MODEM-PRO/index.md
 
