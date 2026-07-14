@@ -19,7 +19,7 @@ The board integrates essential hardware components such as a **USB Type-C interf
 
 Its **breadboard-friendly** form factor and clearly labeled GPIO pins make it ideal for both beginners and advanced developers working with the **ESP-IDF, Arduino, or other ESP32** compatible development frameworks.
 
-![ESP32-C3-DEV](.\assets\images\esp32-c3_dev_top.png)
+![ESP32-C3-DEV](assets\images\esp32-c3_dev_top.png)
 
 ## Key Features
 
@@ -57,7 +57,7 @@ Its **breadboard-friendly** form factor and clearly labeled GPIO pins make it id
 
 ## Pinout
 
-![A7672S-MODEM-PRO Pinout](.\assets\images\esp32-c3-dev_pinout.png)
+![A7672S-MODEM-PRO Pinout](assets\images\esp32-c3-dev_pinout.png)
 
 ### Pinout Description
 

@@ -12,7 +12,7 @@ Follow these steps to connect your device to a self-hosted MQTT broker:
 2. Navigate to the **MQTT** settings page.
 3. By default, MQTT functionality is disabled.  
    Toggle the **Enable MQTT** switch to **ON** to activate configuration fields.
-    ![MQTT Page](./assets/images/mqtt_page.PNG)
+    ![MQTT Page](assets/images/mqtt_page.PNG)
 4. Set **MQTT Platform** to **Self-Hosted Broker**.
 5. Enter the **Broker Server Address** and **Port Number**.
 6. (Optional) For secure communication:
@@ -40,7 +40,7 @@ To connect to the **Anedya.io** cloud platform:
 2. Navigate to the **MQTT** settings page.
 3. By default, MQTT functionality is disabled.  
    Toggle the **Enable MQTT** switch to **ON** to activate configuration fields.
-    ![MQTT Page](./assets/images/mqtt_page.PNG)
+    ![MQTT Page](assets/images/mqtt_page.PNG)
 4. Set **MQTT Platform** to **Self-Hosted Broker**.
 5. Choose **Anedya.io** as the **MQTT Platform**.
 6. Enter the **Broker Server Address** and **Port Number**.
