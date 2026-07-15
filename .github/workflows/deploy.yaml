@@ -1,19 +1,26 @@
 name: Deploy Documentation
 
 on:
-  push:
-    tags:
-      - "v*"
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
 
 permissions:
   contents: read
 
 jobs:
   deploy:
+    if: github.event.pull_request.merged == true &&
+        github.event.pull_request.head.ref == 'dev'
+
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
