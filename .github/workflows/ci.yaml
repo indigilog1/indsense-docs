@@ -3,12 +3,7 @@ name: MkDocs CI
 on:
   push:
     branches:
-      - develop
-      - main
-
-  pull_request:
-    branches:
-      - main
+      - dev
 
 jobs:
   test:
@@ -21,6 +16,9 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: |
+      - name: Install Dependencies
+        run: |
           pip install -r requirements.txt
-          mkdocs build --strict
+
+      - name: Build Documentation
+        run: mkdocs build --strict

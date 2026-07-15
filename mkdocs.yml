@@ -26,8 +26,8 @@ nav:
   - A7672S-MODEM-PRO:
       - A7672S-MODEM-PRO/index.md
 
-  - ESP32-C3-DEV:
-      - ESP32-C3-DEV/index.md
+  # - ESP32-C3-DEV:
+  #     - ESP32-C3-DEV/index.md
 
 theme:
   name: material
