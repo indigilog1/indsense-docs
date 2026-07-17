@@ -33,10 +33,11 @@ Connect your device to a Wi-Fi network using the built-in configuration portal. 
       - **Username:** `admin`
       - **Password:** `admin`
      
-    >    ⚠️ **Important:** For security, change the default username and password immediately after logging in.  
-   Refer to: [Change Login Password](password.md)
+!!! warning "Change Login Password"
+    For security, change the default username and password immediately after logging in.  
+    Refer to: [Change Login Password](password.md)
 
-5. **Select Wi-Fi Network**
+1. **Select Wi-Fi Network**
 
     - Navigate to the **Network** tab.
     - Available networks will be listed.  
@@ -44,7 +45,7 @@ Connect your device to a Wi-Fi network using the built-in configuration portal. 
      
      ![Network Page](assets/images/network_page.PNG)
 
-6. **Connect to Desired Network**
+2. **Connect to Desired Network**
 
     - Click on the desired Wi-Fi network.
     - Enter the password when prompted:
@@ -54,13 +55,13 @@ Connect your device to a Wi-Fi network using the built-in configuration portal. 
    
     ![Network Credentials Page](assets/images/network_cred.PNG)
 
-7. **Confirm Connection**
+3. **Confirm Connection**
 
     - Upon successful connection:
         - **LED Status:** `Blinking Green every 100ms`
     - Connect your PC to the same Wi-Fi network.
 
-8. **Access Device**
+4. **Access Device**
 
     - After connecting to the configured network, click **OK** on the portal.
     - The page will refresh and redirect you to the login page where you can access the device.
@@ -81,7 +82,8 @@ To change the existing network connection:
 
 ## 🏭 Reset to Factory Defaults
 
-> ⚠️ **Attention:** This action will wipe out all the user saved passwords, network credentials and calibration settings
+!!! warning
+    This action will wipe out all the user saved passwords, network credentials and calibration settings
  
 To perform a factory reset:
 

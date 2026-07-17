@@ -1,0 +1,20 @@
+site_name: INDSENSE
+INHERIT: mkdocs.yml
+
+nav:
+  - IND-MOD-IO88:
+      IND-MOD-IO88/index-pdf.md
+
+plugins:
+  - to-pdf:
+      author: Ajay
+      copyright: Copyright @ Indigilog Innovations Pvt Ltd 2026
+      cover: true
+      cover_title: IND-MOD-IO88
+      cover_subtitle: MOdbus RTU 8-channel Digital IO Module
+      cover_logo: assets/images/indsense_logo.png
+      toc_title: "Table of Contents"
+      toc_level: 4
+      ordered_chapter_level: 4
+      output_path: pdf/IND-MOD-IO8.pdf
+      enabled_if_env: ENABLE_PDF_EXPORT
