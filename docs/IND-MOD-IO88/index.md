@@ -1,6 +1,6 @@
 # IND-MOD-IO88
 
-![IND-MOD-IO88](assets/images/ind-mod-io88_front_top.jpeg)
+![IND-MOD-IO88](assets/images/ind-mod-io88_front_top.png){ width="300" align=center}
 
 ## Electrical Safety
 

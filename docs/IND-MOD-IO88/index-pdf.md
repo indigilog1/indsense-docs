@@ -1,6 +1,6 @@
 # IND-MOD-IO88
 
-<!-- ![IND-MOD-IO88](assets/ind-mod-io88_front_top.jpeg) -->
+![IND-MOD-IO88](assets/images/ind-mod-io88_front_top.png){ width="200" }
 
 The **IND-MOD-IO88** is a compact industrial **Modbus RTU 8-channel I/O Module** designed to simplify the integration of digital inputs and outputs into PLC, SCADA, HMI, and Industrial IoT systems. It communicates over the industry-standard **RS-485** interface using the **Modbus RTU** protocol, ensuring reliable interoperability with a wide range of industrial automation equipment.
 

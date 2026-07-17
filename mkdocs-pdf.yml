@@ -12,7 +12,7 @@ plugins:
       cover: true
       cover_title: IND-MOD-IO88
       cover_subtitle: MOdbus RTU 8-channel Digital IO Module
-      cover_logo: assets/images/logo.png
+      cover_logo: assets/images/indsense_logo.png
       toc_title: "Table of Contents"
       toc_level: 4
       ordered_chapter_level: 4
