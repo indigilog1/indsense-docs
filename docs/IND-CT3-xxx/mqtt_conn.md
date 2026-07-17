@@ -51,7 +51,8 @@ To connect to the **Anedya.io** cloud platform:
 9. Set the **Publish Interval** as desired.
 10. Click **Save Settings** to establish the connection.
 
-> 📢 **Note:** For specific setup instructions related to your Anedya.io account, refer to the [Anedya.io documentation](https://anedya.io).
+!!! note
+    For specific setup instructions related to your Anedya.io account, refer to the [Anedya.io documentation](https://anedya.io).
 
 ✅ Once connected, your device will automatically start publishing sensor data to the configured broker.
 

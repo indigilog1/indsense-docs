@@ -1,6 +1,7 @@
 ### 🔐 Change Captive Portal Password
 
-> **Recommendation:** For enhanced security, it is strongly advised to change the default captive portal password after the initial setup.
+!!! warning
+    For enhanced security, it is strongly advised to change the default captive portal password after the initial setup.
 
 #### Steps to Change Password:
 
@@ -13,5 +14,3 @@
 4. Click **Save Settings**.
 5. The device will automatically reboot and redirect you to the **Login Page**.
 6. Log in again using your **new password**.
-
-> **Note:** Ensure you remember the new password, as it is required for future access to the device's settings.
