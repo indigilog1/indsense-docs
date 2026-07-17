@@ -1,36 +1,6 @@
 # IND-MOD-IO88
 
-![IND-MOD-IO88](assets/images/ind-mod-io88_front_top.jpeg)
-
-## Electrical Safety
-
-!!! danger "Risk of Electric Shock"
-
-    The IND-MOD-IO88 is intended for use with industrial control systems. Incorrect installation or wiring may result in electric shock, equipment damage, or personal injury.
-
-    - Disconnect all power sources before installing or servicing the module.
-    - Verify that the power supply is turned off before making or modifying any wiring connections.
-    - Never touch exposed conductors while the system is energized.
-
-!!! warning "Qualified Personnel Only"
-
-    Installation, commissioning, and maintenance of this product must only be performed by qualified personnel familiar with industrial electrical systems and local electrical safety regulations.
-
-!!! warning "Observe Voltage Ratings"
-
-    Ensure that all input voltages, output loads, and power supply connections remain within the specifications provided in this manual. Exceeding the maximum ratings may permanently damage the module.
-
-!!! caution "Wiring"
-
-    - Use appropriately sized wires and tighten terminal screws securely.
-    - Verify wiring polarity before applying power.
-    - Keep signal wiring separate from high-voltage or high-current cables to reduce electrical noise.
-
-!!! info "Regulatory Compliance"
-
-    Follow all applicable local electrical codes and safety standards when installing and operating the IND-MOD-IO88.
-
-## Introduction  
+<!-- ![IND-MOD-IO88](assets/ind-mod-io88_front_top.jpeg) -->
 
 The **IND-MOD-IO88** is a compact industrial **Modbus RTU 8-channel I/O Module** designed to simplify the integration of digital inputs and outputs into PLC, SCADA, HMI, and Industrial IoT systems. It communicates over the industry-standard **RS-485** interface using the **Modbus RTU** protocol, ensuring reliable interoperability with a wide range of industrial automation equipment.
 
@@ -40,7 +10,7 @@ Designed for demanding industrial environments, the IND-MOD-IO88 supports both *
 
 Whether used as a distributed remote I/O module, a PLC expansion module, or an interface between field devices and Industrial IoT gateways, the IND-MOD-IO88 offers a cost-effective, reliable, and easy-to-deploy solution for industrial automation applications.
 
-### Key Features
+## Key Features
 
 * 8 opto-isolated digital inputs
 * Supports both dry-contact and wet-contact inputs (up to 24 VDC)
@@ -51,7 +21,7 @@ Whether used as a distributed remote I/O module, a PLC expansion module, or an i
 * Compact DIN-rail mount enclosure
 * Easy configuration and integration into existing Modbus networks
 
-### Typical Applications
+## Typical Applications
 
 * PLC I/O expansion
 * Remote monitoring and control
@@ -82,9 +52,37 @@ Whether used as a distributed remote I/O module, a PLC expansion module, or an i
 | **Modbus Slave Address**           | Configurable from 1 to 255                                     |
 | **Default Slave Address**          | 1 (0x01)                                                       |
 
-## Wiring
+# Wiring
 
-### Terminal Assignment
+## Electrical Safety
+
+!!! danger "Risk of Electric Shock"
+
+    The IND-MOD-IO88 is intended for use with industrial control systems. Incorrect installation or wiring may result in electric shock, equipment damage, or personal injury.
+
+    - Disconnect all power sources before installing or servicing the module.
+    - Verify that the power supply is turned off before making or modifying any wiring connections.
+    - Never touch exposed conductors while the system is energized.
+
+!!! warning "Qualified Personnel Only"
+
+    Installation, commissioning, and maintenance of this product must only be performed by qualified personnel familiar with industrial electrical systems and local electrical safety regulations.
+
+!!! warning "Observe Voltage Ratings"
+
+    Ensure that all input voltages, output loads, and power supply connections remain within the specifications provided in this manual. Exceeding the maximum ratings may permanently damage the module.
+
+!!! caution "Wiring"
+
+    - Use appropriately sized wires and tighten terminal screws securely.
+    - Verify wiring polarity before applying power.
+    - Keep signal wiring separate from high-voltage or high-current cables to reduce electrical noise.
+
+!!! info "Regulatory Compliance"
+
+    Follow all applicable local electrical codes and safety standards when installing and operating the IND-MOD-IO88.
+
+## Terminal Assignment
 
 | Terminal   | Description                        | Terminal   | Description                         |
 | ---------- | ---------------------------------- | ---------- | ----------------------------------- |
@@ -104,7 +102,7 @@ Whether used as a distributed remote I/O module, a PLC expansion module, or an i
 
 ---
 
-### Digital Input Wiring
+## Digital Input Wiring
 
 The IND-MOD-IO88 supports three types of digital input connections:
 
@@ -112,7 +110,7 @@ The IND-MOD-IO88 supports three types of digital input connections:
 - **NPN Sensor (Sinking Input)**
 - **PNP Sensor (Sourcing Input)**
 
-#### DI COM Configuration
+### DI COM Configuration
 
 The **DI COM** terminal determines how the digital inputs operate.
 
@@ -152,7 +150,7 @@ Connect **DI COM** to **GND**. -->
 
 <!-- --- -->
 
-### Digital Output Wiring
+## Digital Output Wiring
 
 The digital outputs are **Open-Drain (Low-Side Switching)** outputs.
 
@@ -169,7 +167,7 @@ The output load should be connected between **DO COM (+V)** and the correspondin
 
 ---
 
-### RS-485 Wiring
+## RS-485 Wiring
 
 | Terminal   | Description                               |
 | ---------- | ----------------------------------------- |
@@ -186,7 +184,7 @@ The output load should be connected between **DO COM (+V)** and the correspondin
 
 ---
 
-### Power Supply
+## Power Supply
 
 | Terminal   | Description             |
 | ---------- | ----------------------- |
@@ -198,9 +196,9 @@ The output load should be connected between **DO COM (+V)** and the correspondin
     Verify the power supply polarity before powering the module. Reverse polarity may damage the device.
 
 
-## Operation Protocol
+# Operation Protocol
 
-### Function Code
+## Function Code
 
 | Function Code | Description                   | Note                                           |
 | ------------- | ----------------------------- | ---------------------------------------------- |
@@ -212,7 +210,7 @@ The output load should be connected between **DO COM (+V)** and the correspondin
 | 0F            | Write Multiple Coils          | Control multiple outputs                       |
 | 10            | Write Multiple Registers      | Write multiple device configuration parameters |
 
-### Register Address
+## Register Address
 
 | Address (HEX)              | Description                   | Register Value                         | Access     | Function Code    |
 | -------------------------- | ----------------------------- | -------------------------------------- | ---------- | ---------------- |
@@ -226,7 +224,7 @@ The output load should be connected between **DO COM (+V)** and the correspondin
 
     Function Code **0x0F (Write Multiple Coils)** uses the same starting addresses (`0x0000`–`0x0007`) but writes multiple coil states in a single Modbus request.
 
-### Baudrate Table
+## Baudrate Table
 
 | Baudrate       | Register Value |
 | -------------- | -------------- |
@@ -240,7 +238,7 @@ The output load should be connected between **DO COM (+V)** and the correspondin
 | 256000         | 7              |
 
 
-## Modbus Communication Examples
+# Modbus Communication Examples
 
 The examples below assume the module is operating at its **default Slave Address (`0x01`)**. All data frames are represented in Hexadecimal (`HEX`).
 
@@ -248,7 +246,7 @@ The examples below assume the module is operating at its **default Slave Address
     Every Modbus RTU frame follows a standard structure:
     `[Slave Address] [Function Code] [Data/Address bytes...] [CRC Low] [CRC High]`
 
-### 0x01: Read Coil Status (Read Digital Outputs)
+## 0x01: Read Coil Status (Read Digital Outputs)
 
 Used to read the current ON/OFF status of the digital outputs (DO0 to DO7).
 
@@ -271,7 +269,7 @@ Used to read the current ON/OFF status of the digital outputs (DO0 to DO7).
 
 
 
-### 0x02: Read Discrete Inputs (Read Digital Inputs)
+## 0x02: Read Discrete Inputs (Read Digital Inputs)
 
 Used to read the current state of the digital inputs (DI0 to DI7).
 
@@ -294,7 +292,7 @@ Used to read the current state of the digital inputs (DI0 to DI7).
 
 
 
-### 0x03: Read Holding Registers (Read Configuration)
+## 0x03: Read Holding Registers (Read Configuration)
 
 Used to read the device's configuration parameters, such as the Slave Address and Baud Rate.
 *(Note: When querying Modbus over the wire, the `4x` prefix is omitted; address `4x0000` is transmitted as `0x0000`).*
@@ -317,7 +315,7 @@ Used to read the device's configuration parameters, such as the Slave Address an
 * `00 01`: Data 2 (Baud Rate = 1, corresponding to 9600 bps)
 * `6B F3`: CRC16
 
-### 0x05: Write Single Coil (Control a Single Output)
+## 0x05: Write Single Coil (Control a Single Output)
 
 Used to turn a single digital output ON or OFF. According to the standard Modbus RTU protocol, `0xFF00` turns the output ON, and `0x0000` turns it OFF.
 
@@ -333,7 +331,7 @@ Used to turn a single digital output ON or OFF. According to the standard Modbus
 
 * **Response Frame:** `01 05 00 00 FF 00 8C 3A` *(The device perfectly echoes the request upon success)*
 
-### 0x06: Write Single Holding Register (Change Configuration)
+## 0x06: Write Single Holding Register (Change Configuration)
 
 Used to write configuration parameters, such as changing the Slave Address or Baud Rate.
 
@@ -352,7 +350,7 @@ Used to write configuration parameters, such as changing the Slave Address or Ba
 !!! warning
     A power cycle or module reboot may be required before the new Baud Rate or Slave Address takes effect.
 
-### 0x0F: Write Multiple Coils (Control Multiple Outputs)
+## 0x0F: Write Multiple Coils (Control Multiple Outputs)
 
 Used to set the ON/OFF status of several digital outputs simultaneously in a single command.
 

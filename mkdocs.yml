@@ -57,3 +57,11 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.details
   - pymdownx.superfences
+
+plugins:
+  - to-pdf:
+      author: Ajay
+      copyright: Copyright @ Indigilog Innovations Pvt Ltd 2026
+      cover: true
+      toc_title: "Table of Contents"
+      enabled_if_env: ENABLE_PDF_EXPORT
